@@ -1,5 +1,6 @@
 # pythontutor.uz
-TTS team
+
+# CodeLines team
 
 Python ni o'rganuvchilar va dasturchilar uchun qo'llanma
 
