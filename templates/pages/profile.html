@@ -1,5 +1,5 @@
 {% extends 'layouts/base.html' %}
+
 {% block content %}
-<h1>{{data.title}}</h1>
-<p>{{data.content}}</p>
+<h2>username: {{ request.user.username }}</h2>
 {% endblock %}

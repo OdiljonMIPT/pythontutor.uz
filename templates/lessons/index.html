@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Lesson</title>
-</head>
-<body>
-Nimadir content lesson haqida
-</body>
-</html>
+{% extends 'layouts/base.html' %}
+{% block content %}
+
+<h1>Mavzular ro'yxati</h1>
+{% for i in lessons %}
+<h3><a href="/lessons/{{ i.slug }}"> {{ forloop.counter }}. {{ i.title }} </a></h3>
+{% endfor %}
+
+{%endblock%}

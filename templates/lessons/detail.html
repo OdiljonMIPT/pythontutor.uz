@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Python Tutor | CodeLines Team</title>
-</head>
-<body>
-<h1>{{data.title}}</h1>
-<p>{{data.content}}</p>
+{% extends 'layouts/base.html' %}
+{% block content %}
+    <h1>{{ data.title }}</h1>
+    <p>{{ data.content }}</p>
 
 
-<br>
-<h2>{{ data.title }} ning masalalari: </h2>
-{% for i in problems %}
-<h3><a href="/problems/{{ i.slug }}"> {{ forloop.counter }}. {{ i.title }} </a></h3>
-{% endfor %}
-</body>
-</html>
+    <br>
+    <h2>{{ data.title }} ning masalalari: </h2>
+    {% for i in problems %}
+        <h3><a href="/problems/{{ i.slug }}"> {{ forloop.counter }}. {{ i.title }} </a></h3>
+    {% endfor %}
+{% endblock %}

@@ -2,8 +2,13 @@ from django.shortcuts import render
 from .models import Lesson
 from problems.models import Problem
 
+
 def index(request):
-    return render(request, 'lessons/index.html')
+    objs = Lesson.objects.filter(is_published=True)
+    context = {
+        'lessons': objs,
+    }
+    return render(request, 'lessons/index.html', context)
 
 
 def detail_lesson(request, slug):

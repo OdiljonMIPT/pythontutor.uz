@@ -1,0 +1,10 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+
+  <form method="post">
+      {% csrf_token %}
+      <p>Rostdan Log Out qilmoqchimisan</p>
+      <button type="submit">Ha Log Out Qilinsin</button>
+  </form>
+
+{% endblock %}
